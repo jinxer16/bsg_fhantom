@@ -13,7 +13,7 @@ import {useSelector,useDispatch}  from "react-redux"
 function Withdraw_m(props) {
     const dispatch = useDispatch()
   let acc = useSelector((state) => state.connect?.connection);
-  let {withdrawDetail,all_val, status} = useSelector((state)=>state.withDrawInfo);
+  let {withdrawDetail,all_val} = useSelector((state)=>state.withDrawInfo);
     const [loader, setLoader] = useState(false);
     const [toatlWithdraw, settotalWithdraw] = useState(0)
     const getDetail = async () => {
@@ -98,20 +98,11 @@ function Withdraw_m(props) {
                 </Modal.Header>
                 <Modal.Body className='body_m_bg bb'>
                     <div className="container">
-                    <div className="row">
-                          { status && <div className="col-lg-12">
-                                <div className="d-flex justify-content-evenly">
-                                    <h5 className='text-white'>You have to upgrade your package to get passive income</h5>
-                                    <p className='light mt-3'></p>
-                                    {/* <p className='witddraw_p'>{withdrawDetail.unlock} ULE</p> */}
-                                </div>
-                            </div>}
-                        </div>
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>Unlock principal</p>
-                                    <p className='witddraw_p'>{withdrawDetail.unlock} ULE</p>
+                                    <p className='text-white'>Team ROI Income</p>
+                                    <p className='witddraw_p'>{withdrawDetail.ROIReleasedd} ULE</p>
                                 </div>
                             </div>
                         </div>
@@ -142,40 +133,40 @@ function Withdraw_m(props) {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>2-4 level</p>
-                                    <p className='witddraw_p'>{withdrawDetail.level4Released} ULE</p>
+                                    <p className='text-white'>2-5 level</p>
+                                    <p className='witddraw_p'>{withdrawDetail.level2to5} ULE</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>5-25 level</p>
-                                    <p className='witddraw_p'>{withdrawDetail.level5Released} ULE</p>
+                                    <p className='text-white'>6-20 level</p>
+                                    <p className='witddraw_p'>{withdrawDetail.level6to20} ULE</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>Freezing</p>
-                                    <p className='witddraw_p'>{withdrawDetail.level4Freezed} ULE</p>
+                                    <p className='text-white'>Platinum reward</p>
+                                    <p className='witddraw_p'>{withdrawDetail.Platinum} ULE</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>Diamond reward</p>
-                                    <p className='witddraw_p'>{withdrawDetail.diamond} ULE</p>
+                                    <p className='text-white'>Gold reward</p>
+                                    <p className='witddraw_p'>{withdrawDetail.Gold} ULE</p>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="d-flex justify-content-between">
-                                    <p className='text-white'>Double Diamond reward</p>
-                                    <p className='witddraw_p'>{withdrawDetail.doubleDiamond} ULE</p>
+                                    <p className='text-white'>Silver reward</p>
+                                    <p className='witddraw_p'>{withdrawDetail.Silver} ULE</p>
                                 </div>
                             </div>
                         </div>

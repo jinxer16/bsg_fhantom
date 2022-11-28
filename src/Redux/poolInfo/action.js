@@ -7,16 +7,17 @@ export const getpoolDetail = () => {
       let obj = {}
       try {
         let financeAppcontractOf = new web3Supply.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
-        let totalUsers = await financeAppcontractOf.methods.totalUser().call();
-        obj = {...obj,totalUsers}
+        let Platinum = await financeAppcontractOf.methods.Platinum().call();
+        Platinum = web3Supply.utils.fromWei(Platinum)
+        obj = {...obj,Platinum}
   
-        let diamond = await financeAppcontractOf.methods.diamond().call();
-        diamond = web3Supply.utils.fromWei(diamond)
-        obj = {...obj, diamond}
+        let Gold = await financeAppcontractOf.methods.Gold().call();
+        Gold = web3Supply.utils.fromWei(Gold)
+        obj = {...obj, Gold}
   
-        let doubleDiamond = await financeAppcontractOf.methods.doubleDiamond().call();
-        doubleDiamond = web3Supply.utils.fromWei(doubleDiamond)
-        obj = {...obj, doubleDiamond}
+        let Silver = await financeAppcontractOf.methods.Silver().call();
+        Silver = web3Supply.utils.fromWei(Silver)
+        obj = {...obj, Silver}
   
   
         let topPool = await financeAppcontractOf.methods.topPool().call();

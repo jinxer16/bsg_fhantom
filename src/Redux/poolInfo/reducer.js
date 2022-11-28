@@ -3,9 +3,9 @@ import {
 } from "../types";
 
 const INITIAL_STATE = {
-    totalUsers: 0,
-    diamond: 0,
-    doubleDiamond: 0,
+    Platinum: 0,
+    Gold: 0,
+    Silver: 0,
     topPool: 0
 };
 
@@ -17,9 +17,9 @@ const poolInfoReducer = (state = INITIAL_STATE, {
         case ActionTypes.POOL_DETAIL:
             return {
                 ...state,
-                totalUsers: payload.totalUsers,
-                    diamond: payload.diamond,
-                    doubleDiamond: payload.doubleDiamond,
+                Platinum: payload.Platinum,
+                    Gold: payload.Gold,
+                    Silver: payload.Silver,
                     topPool: payload.topPool
             };
         default:

@@ -7,7 +7,7 @@ import { RiMessage3Fill } from "react-icons/ri";
 import {useSelector, useDispatch}  from "react-redux";
 import {getpoolDetail} from '../../Redux/poolInfo/action';
 function Stack_p() {
-  let {totalUsers,diamond,doubleDiamond,topPool} = useSelector((state) => state.poolInfo);
+  let {Platinum,Gold,Silver,topPool} = useSelector((state) => state.poolInfo);
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getpoolDetail())
@@ -28,8 +28,8 @@ function Stack_p() {
                     </div>
 
                     <div className="mt-3">
-                      <h3 className="stack_p_h3 mb-2">Participants</h3>
-                      <p className="mt-3 text-white text-start">{totalUsers}</p>
+                      <h3 className="stack_p_h3 mb-2">Platinum Pool</h3>
+                      <p className="mt-3 text-white text-start">{Platinum}</p>
                     </div>
                   </div>
                 </div>
@@ -41,8 +41,8 @@ function Stack_p() {
                     </div>
 
                     <div className="mt-3">
-                      <h3 className="stack_p_h3 mb-2">Diamond Pool</h3>
-                      <p className="mt-3 text-white text-start">$:{Number(diamond).toFixed(2)}</p>
+                      <h3 className="stack_p_h3 mb-2">Gold Pool</h3>
+                      <p className="mt-3 text-white text-start">$:{Number(Gold).toFixed(2)}</p>
                     </div>
                   </div>
                 </div>
@@ -56,9 +56,9 @@ function Stack_p() {
                     </div>
 
                     <div className="mt-3">
-                      <h3 className="stack_p_h3 mb-2">Double Diamond Pool
+                      <h3 className="stack_p_h3 mb-2">Silver Pool
                       </h3>
-                      <p className="mt-3 text-white text-start">${Number(doubleDiamond).toFixed(2)}</p>
+                      <p className="mt-3 text-white text-start">${Number(Silver).toFixed(2)}</p>
                     </div>
                   </div>
                 </div>

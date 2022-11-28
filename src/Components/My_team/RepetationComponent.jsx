@@ -52,8 +52,8 @@ const RepetationComponent = () => {
       );
       let depostTime = await financeAppcontractOf.methods.getCurDay().call();
       setdepositTime(depostTime)
-      let day = await financeAppcontractOf.methods.dayPerCycle().call();
-      setDays(day);
+      // let day = await financeAppcontractOf.methods.dayPerCycle().call();
+      // setDays(day);
     } catch (e) {
       console.log(e.message);
     }
